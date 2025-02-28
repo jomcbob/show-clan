@@ -9,51 +9,29 @@ function randomizeSeats() {
         studentNames.push(formattedName);
     }
 
+    let indexJomcbob = studentNames.indexOf(jomcbob)
+
     let indexfriend1 = studentNames.indexOf(friend1)
-    let indexAndrew = studentNames.indexOf(andrew)
     let indexfriend2 = studentNames.indexOf(friend2)
     let indexfriend3 = studentNames.indexOf(friend3)
     let indexfriend4 = studentNames.indexOf(friend4)
-    let indexfriend5 = studentNames.indexOf(friend5)
-    let indexfriend6 = studentNames.indexOf(friend6)
-    let indexfriend7 = studentNames.indexOf(friend7)
-    let indexfriend8 = studentNames.indexOf(friend8)
-    let indexfriend9 = studentNames.indexOf(friend9)
-    let indexfriend10 = studentNames.indexOf(friend10)
-    let indexfriend11 = studentNames.indexOf(friend11)
 
     let pair = []
 
-    if (pair.length === 0 && indexAndrew > -1) {
-        if (count === 1 || count === 6 && indexfriend3 > -1 && indexAndrew > -1) {
-            pair = [andrew, friend3]
-        } else if (count === 2 || count === 4 && indexfriend4 > -1 && indexAndrew > -1) {
-            pair = [andrew, friend4]
-        } else if (count === 3  && indexfriend9 > -1 && indexAndrew > -1) {
-            pair = [andrew, friend9]
-        } else if (count === 5 || Math.random() < 0.5 && indexfriend1 > -1 && indexAndrew > -1) {
-            pair = [andrew, friend1]
-        } else if (Math.random() < 0.005 && indexfriend8 > -1 && indexAndrew > -1) {
-            pair = [andrew, friend8]
-        } else if (Math.random() < 0.1 && indexfriend2 > -1 && indexAndrew > -1) {
-            pair = [andrew, friend2]
-        } else if (Math.random() < 0.1 && indexfriend5 > -1 && indexAndrew > -1) {
-            pair = [andrew, friend5]
-        } else if (Math.random() < 0.3 && indexfriend6 > -1 && indexAndrew > -1) {
-            pair = [andrew, friend6]
-        } else if (Math.random() < 0.1 && indexfriend7 > -1 && indexAndrew > -1) {
-            pair = [andrew, friend7]
-        } else if (Math.random() < 0.9 && indexfriend10 > -1 && indexAndrew > -1) {
-            pair = [andrew, friend10]
-        } else if (Math.random() < 1.1 && indexfriend11 > -1 && indexAndrew > -1) {
-            pair = [andrew, friend11]
+    if (pair.length === 0 && indexJomcbob > -1) {
+        if         (count === 1 && indexfriend1 > -1 && indexJomcbob > -1) {
+            pair = [jomcbob, friend1]
+        } else if (count === 2 && indexfriend2 > -1 && indexJomcbob > -1) {
+            pair = [jomcbob, friend2]
+        } else if (count === 3  && indexfriend3 > -1 && indexJomcbob > -1) {
+            pair = [jomcbob, friend3]
+        } else if (count === 4 && indexfriend4 > -1 && indexJomcbob > -1) {
+            pair = [jomcbob, friend4]
         }
     }
-    if (pair.length === 0 && indexAndrew > -1) {
-        if (indexfriend4 > -1) {
-            pair = [andrew, friend4]
-        } else if (indexfriend3 > -1) {
-            pair = [andrew, friend3]
+    if (pair.length === 0 && indexJomcbob > -1) {
+        if (indexfriend1 > -1) {
+            pair = [jomcbob, friend1]
         }
     }
 
@@ -92,7 +70,7 @@ function randomizeSeats() {
     }
 
     saveDeskContentsToLocalStorage()
-    if (count <= 6) {
+    if (count < 4) {
         count++
     } else count = 1
 }
@@ -157,15 +135,9 @@ window.onload = function() {
     loadDeskContentsFromLocalStorage()
 }
 
-const andrew = "Andrew borlin";
-const friend1 = "Keo matsura";
-const friend2 = "Tag craven";
-const friend3 = "Alayna foster";
-const friend4 = "Jenna kauer";
-const friend5 = "Jacob myer";
-const friend6 = "Vaughn lind";
-const friend7 = "Nia borlin";
-const friend8 = "Hudson tyger";
-const friend9 = "Brielle foster";
-const friend10 = "Karli richardson";
-const friend11 = "Chloe richardson";
+const jomcbob = "Jomcbob";
+const friend1 = "Bob1";
+const friend2 = "Bob2";
+const friend3 = "Bob3";
+const friend4 = "Bob4";
+
