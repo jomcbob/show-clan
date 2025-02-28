@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 10px;
+}
+
+h2{
+    margin-left: 10vw;
+}
+
+.teacher{
+    width: 100vw;
+    display: flex;
+    justify-content: start;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.seating-chart {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 20px; /* To make sure it's aligned to the left */
+}
+
+.desk {
+    width: 13vh;  /* Adjust size for better fitting */
+    height: 13vh; /* Adjust size for better fitting */
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;  /* Ensures long words will break and wrap */
+    word-break: break-word; /* Ensures that words break if necessary */
+}
+
+.input-section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+}
+
+.student {
+    padding: 6px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    cursor: cell;
+}
