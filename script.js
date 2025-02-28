@@ -118,11 +118,11 @@ function saveDeskContentsToLocalStorage() {
         const desk = document.getElementById(`seat${i}`)
         deskContents.push(desk.textContent.trim())
     }
-    localStorage.setItem('deskContents', JSON.stringify(deskContents))
+    localStorage.setItem('Contents', JSON.stringify(deskContents))
 }
 
 function loadDeskContentsFromLocalStorage() {
-    const savedDeskContents = JSON.parse(localStorage.getItem('deskContents'))
+    const savedDeskContents = JSON.parse(localStorage.getItem('Contents'))
     if (savedDeskContents) {
         for (let i = 1; i <= 36; i++) {
             const desk = document.getElementById(`seat${i}`)
